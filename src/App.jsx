@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Lottie from 'lottie-react'
+import animationData from './assets/97525-code-dark.json'
+import { useRef } from 'react';
 import './App.css';
 
 const App = () => {
@@ -30,7 +33,9 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className='wrap'>
+      <h1>University Search</h1>
+      <p>Find universities based on country</p>
       <div className='navbar'>
         <input
           type='text'
@@ -41,13 +46,15 @@ const App = () => {
         <button onClick={handleSearch}>Search</button>
         <button onClick={clearPage}>Clear</button>
       </div>
-
+      <div className='anime'>
+        <Lottie animationData={animationData} />
+      </div>
       {validCountry ? (
         <div className='grid-container'>
           {universities.map((university) => (
             <div key={university.name} className='country'>
               <h3>{university.name}</h3>
-              <p>Domain: {university.domains.join(', ')}</p>
+              <p>Domain: {university.domains}</p>
               <p>
                 Website:{' '}
                 <a href={university.web_pages[0]} target='_blank' rel='noreferrer'>
