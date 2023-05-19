@@ -1,0 +1,49 @@
+.country{
+  display:flex;
+  flex-direction: column;
+  border: 2px solid black;
+  text-align: center;
+  width:10rem;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  flex: row;
+  background-color: bisque;
+  height: 80px;
+  justify-content: center;
+  gap: 4rem;
+}
+#search{
+  border-left:1px solid grey ;
+  border-radius: 7px;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  gap:0px;
+}
+.navbar input{
+  padding: 0.5rem;
+}
+.navbar button {
+  padding:3px 1rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.country {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.wrap{
+  display:flex;
+  background-color: aqua;
+  justify-content: center;
+  flex-direction:row ;
+  gap: 3rem;
+}
