@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react'
 import animationData from './assets/97525-code-dark.json'
-import { useRef } from 'react';
+
 import './App.css';
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://universities.hipolabs.com/search?country=${searchParam}`
+        `https://universitiesapi.onrender.com/v1/api/universities/${searchParam}`
       );
       const data = await response.json();
       if (data.length === 0) {
@@ -51,6 +51,7 @@ const App = () => {
       </div>
       {validCountry ? (
         <div className='grid-container'>
+         
           {universities.map((university) => (
             <div key={university.name} className='country'>
               <h3>{university.name}</h3>
