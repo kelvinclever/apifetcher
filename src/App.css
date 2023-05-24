@@ -17,6 +17,9 @@ p {
 
 .navbar {
   margin-bottom: 20px;
+  display:flex;
+  justify-content: center;
+  gap:1rem;
 }
 
 input[type='text'] {
@@ -33,6 +36,11 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+button:hover{
+  background-color: rgba(0, 0, 0, 0.144);
+  border: 1px solid  #40FF7D;
+  color: white;
 }
 
 .anime {
